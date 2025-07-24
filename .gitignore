@@ -1,4 +1,4 @@
-./frontend/build
+/frontend/build
 /node_modules
 /package-lock.json
 /frontend/node_modules
