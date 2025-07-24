@@ -1,9 +1,13 @@
 const express = require('express');
+const path = require('path');
 const app = express();
-const PORT = 3001
+const PORT = 3001;
+
+// Serve static files from React build
+app.use(express.static(path.join(__dirname, '../frontend/build')));
 
 app.get('/', (req, res) => {
-  res.send('Hello, Express server!');
+  res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
 });
 
 app.listen(PORT, () => {
